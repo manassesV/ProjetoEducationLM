@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="#fcfcfc"
+        android:id="@+id/ll"
+        android:padding="0dp"
+        tools:context=".ui.main.MainActivity"
+>
+    <android.support.v7.widget.Toolbar
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/green"
+            android:theme="?attr/actionBarTheme"
+            android:minHeight="?attr/actionBarSize"
+            android:id="@+id/toolbar" android:padding="0dp"
+            android:elevation="7dp">
+        <ImageView android:id="@+id/voltar"
+                   android:layout_marginLeft="0dp" android:layout_width="60dp" android:layout_height="?attr/actionBarSize"
+                   android:src="@drawable/leftarrow" android:background="@color/green"/>
+        <ImageView
+                android:layout_width="54dp"
+                android:layout_height="?attr/actionBarSize"
+                android:background="@drawable/school"
+                android:padding="10dp"
+                android:layout_gravity="center"
+                android:layout_margin="5dp"
+        />
+    </android.support.v7.widget.Toolbar>
+
+    <android.support.v7.widget.CardView android:layout_width="match_parent"
+                                        android:layout_height="200dp"
+    android:layout_margin="@dimen/card_margin" android:background="@color/green"
+    >
+
+
+        <TextView
+
+                android:text="@string/app_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" android:id="@+id/txtTitulo"/>
+        <TextView
+                android:text="@string/about"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" android:id="@+id/txtAbout"
+                android:layout_below="@id/txtTitulo"
+                android:layout_marginLeft="@dimen/card_margin"
+                android:layout_marginBottom="@dimen/card_margin"
+                android:layout_marginRight="@dimen/card_margin"
+                android:layout_marginTop="30dp"
+        />
+    </android.support.v7.widget.CardView>
+    <android.support.v7.widget.CardView android:layout_width="match_parent"
+                                        android:layout_height="200dp"
+                                        android:layout_margin="@dimen/card_margin" android:background="@color/green"
+    >
+
+
+        <TextView
+
+                android:text="@string/utilizar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" android:id="@+id/txtUtilizar"/>
+        <TextView
+                android:text="@string/aboututilizar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" android:id="@+id/txtAboututilizar"
+                android:layout_below="@id/txtTitulo"
+                android:layout_marginLeft="@dimen/card_margin"
+                android:layout_marginBottom="@dimen/card_margin"
+                android:layout_marginRight="@dimen/card_margin"
+                android:layout_marginTop="30dp"
+        />
+    </android.support.v7.widget.CardView>
+</LinearLayout>

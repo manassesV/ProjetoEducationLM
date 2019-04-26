@@ -1,0 +1,59 @@
+package com.manasses.manab.project.ui.userprofile
+
+import android.support.v7.app.AppCompatActivity
+import android.os.Bundle
+import com.manasses.manab.project.R
+import android.support.v4.app.NotificationCompat.getExtras
+import com.google.firebase.database.*
+import kotlinx.android.synthetic.main.activity_quiz.*
+
+
+class QuizActivity : AppCompatActivity() {
+
+
+    private var mDatabase: DatabaseReference? = null
+    private lateinit var hash: String;
+
+    init {
+        mDatabase = FirebaseDatabase.getInstance().getReference();
+
+    }
+
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        setContentView(R.layout.activity_quiz)
+        getSupportActionBar()!!.hide()
+        processDatas()
+
+
+    }
+
+
+    fun processDatas(){
+        val bundle = intent.extras
+        hash = bundle!!.getString("hash")
+
+        mDatabase!!.child("question").addListenerForSingleValueEvent(object : ValueEventListener {
+            override fun onDataChange(dataSnapshot: DataSnapshot) {
+
+                for (item_snapshot in dataSnapshot.children) {
+
+
+8                     for (ds in item_snapshot.child(hash).children){
+                         txtPergunta.text = ds.child("question").value.toString()
+                         txtPontos.text = ds.child("pontos").value.toString()
+                     }
+                }
+
+            }
+
+            override fun onCancelled(p0: DatabaseError) {
+
+            }
+        })
+    }
+
+
+
+
+}

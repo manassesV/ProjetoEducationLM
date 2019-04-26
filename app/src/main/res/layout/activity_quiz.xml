@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                                             xmlns:app="http://schemas.android.com/apk/res-auto"
+                                             xmlns:tools="http://schemas.android.com/tools"
+                                             android:layout_width="match_parent"
+                                             android:layout_height="match_parent"
+                                             android:configChanges="keyboardHidden|orientation|screenSize"
+                                             tools:context=".ui.main.MainActivity"
+                                             android:background="@drawable/quadro">
+
+    <LinearLayout android:layout_width="wrap_content"
+                  android:layout_height="86dp"
+                  android:orientation="horizontal" app:layout_constraintEnd_toEndOf="parent"
+                  app:layout_constraintBottom_toTopOf="@+id/btValidar" android:layout_marginTop="8dp"
+                  app:layout_constraintVertical_bias="0.03" app:layout_constraintTop_toTopOf="parent"
+                  android:layout_marginEnd="40dp">
+        <TextView
+                android:text="Pontos:"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/card_margin"
+                android:textSize="25sp" android:textStyle="bold"/>
+        <TextView
+                android:text="TextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/txtPontos"
+                android:layout_marginTop="@dimen/card_margin"
+                android:layout_marginLeft="@dimen/card_margin"
+                android:layout_marginBottom="@dimen/card_margin"
+                android:textSize="25sp"/>
+    </LinearLayout>
+
+    <TextView
+            android:text="TextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/txtPergunta" android:layout_marginTop="147dp"
+            app:layout_constraintTop_toBottomOf="@+id/linearLayout" app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_marginBottom="164dp" app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginEnd="398dp" app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginStart="275dp" android:textSize="60sp" app:layout_constraintHorizontal_bias="0.594"/>
+    <android.support.v7.widget.RecyclerView
+
+            android:background="@android:color/transparent"
+            android:id="@+id/recyclerViewBotao"
+            android:layout_width="wrap_content"
+            android:layout_height="130dp"
+            android:layout_marginTop="8dp"
+            app:layout_constraintTop_toBottomOf="@+id/txtPergunta"
+            android:layout_marginBottom="8dp"
+            app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginStart="8dp" app:layout_constraintEnd_toEndOf="parent" android:layout_marginEnd="8dp"
+            app:layout_constraintHorizontal_bias="0.084" app:layout_constraintVertical_bias="0.555"/>
+
+
+</android.support.constraint.ConstraintLayout>
