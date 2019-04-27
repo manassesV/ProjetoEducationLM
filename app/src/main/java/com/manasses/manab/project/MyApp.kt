@@ -6,6 +6,8 @@ import dagger.android.DispatchingAndroidInjector
 import dagger.android.HasActivityInjector
 import javax.inject.Inject
 
+
+
 class MyApp : Application(), HasActivityInjector {
     @Inject
     lateinit var dispatchingAndroidInjector: DispatchingAndroidInjector<Activity>
@@ -18,5 +20,6 @@ class MyApp : Application(), HasActivityInjector {
     }
     private fun initDagger() {
         DaggerAppComponent.builder().application(this).build().inject(this)
+
     }
 }

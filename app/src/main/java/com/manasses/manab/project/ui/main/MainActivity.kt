@@ -12,8 +12,6 @@ import com.manasses.manab.project.R
 import com.manasses.manab.project.ui.userprofile.UserProfileFragment
 import dagger.android.AndroidInjector
 import android.transition.TransitionInflater
-import com.manasses.manab.project.ui.userprofile.MainFragment
-import com.manasses.manab.project.ui.userprofile.SignUpFragment
 
 
 class MainActivity : AppCompatActivity(), HasSupportFragmentInjector {
@@ -32,6 +30,9 @@ class MainActivity : AppCompatActivity(), HasSupportFragmentInjector {
         getSupportActionBar()!!.hide()
         setUpDagger()
         setUpFragment()
+
+
+
     }
 
     private fun setUpDagger() {

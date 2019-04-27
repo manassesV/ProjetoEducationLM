@@ -13,5 +13,6 @@ class Atividade(
 class Question(
     var pontos: Int?,
     var question: String?,
+    var correct_answer: String?,
     var anwser: ArrayList<String>
 )

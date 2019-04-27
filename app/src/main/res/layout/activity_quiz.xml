@@ -13,13 +13,15 @@
                   android:orientation="horizontal" app:layout_constraintEnd_toEndOf="parent"
                   app:layout_constraintBottom_toTopOf="@+id/btValidar" android:layout_marginTop="8dp"
                   app:layout_constraintVertical_bias="0.03" app:layout_constraintTop_toTopOf="parent"
-                  android:layout_marginEnd="40dp">
+                  android:layout_marginEnd="40dp" android:id="@+id/linearLayout2"
+                  android:background="@color/testcolorblue">
         <TextView
                 android:text="Pontos:"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_margin="@dimen/card_margin"
-                android:textSize="25sp" android:textStyle="bold"/>
+                android:textSize="25sp" android:textStyle="bold"
+                android:textColor="@color/common_google_signin_btn_text_dark_default"/>
         <TextView
                 android:text="TextView"
                 android:layout_width="wrap_content"
@@ -28,7 +30,7 @@
                 android:layout_marginTop="@dimen/card_margin"
                 android:layout_marginLeft="@dimen/card_margin"
                 android:layout_marginBottom="@dimen/card_margin"
-                android:textSize="25sp"/>
+                android:textSize="25sp" android:textColor="@color/common_google_signin_btn_text_dark_default"/>
     </LinearLayout>
 
     <TextView
@@ -40,6 +42,7 @@
             android:layout_marginBottom="164dp" app:layout_constraintEnd_toEndOf="parent"
             android:layout_marginEnd="398dp" app:layout_constraintStart_toStartOf="parent"
             android:layout_marginStart="275dp" android:textSize="60sp" app:layout_constraintHorizontal_bias="0.594"/>
+
     <android.support.v7.widget.RecyclerView
 
             android:background="@android:color/transparent"

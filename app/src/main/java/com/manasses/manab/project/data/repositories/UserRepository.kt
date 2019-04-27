@@ -15,10 +15,7 @@ import com.manasses.manab.project.util.user.AuthState
 import com.manasses.manab.project.util.user.AuthValidation
 import com.google.firebase.auth.UserProfileChangeRequest
 import com.google.firebase.auth.FirebaseUser
-
-
-
-
+import com.google.firebase.crash.FirebaseCrash
 
 
 @Singleton
@@ -70,6 +67,7 @@ constructor(
                         }
 
             } catch (e: Exception) {
+
                 onError(Throwable(AuthState.EXCEPTION.msg))
             }
 
@@ -102,6 +100,7 @@ constructor(
                         }
 
         } catch (e: Exception) {
+            FirebaseCrash.report(e)
             onError(Throwable(AuthState.EXCEPTION.msg))
         }
 
