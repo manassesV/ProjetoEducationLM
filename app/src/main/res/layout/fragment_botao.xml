@@ -9,8 +9,8 @@
               >
  <Button
          android:id="@+id/btDescricao"
-         android:layout_width="100dp"
-         android:layout_height="100dp"
+         android:layout_width="80dp"
+         android:layout_height="80dp"
          android:background="@drawable/background_login"
          android:layout_margin="@dimen/card_margin"
          android:textStyle="bold"

@@ -101,6 +101,9 @@ dependencies {
 
     implementation 'com.google.firebase:firebase-crash:16.2.1'
 
+    implementation files('libs/YouTubeAndroidPlayerApi.jar')
+
+
 
 }
 com.google.gms.googleservices.GoogleServicesPlugin.config.disableVersionCheck = true

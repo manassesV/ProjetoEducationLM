@@ -17,15 +17,14 @@ import android.view.animation.AnimationUtils
 import com.irozon.alertview.AlertStyle
 import com.irozon.alertview.AlertView
 import com.manasses.manab.project.R
-import com.manasses.manab.project.util.user.AuthState
 import dagger.android.support.AndroidSupportInjection
-import kotlinx.android.synthetic.main.fragment_sign_up.*
-import com.manasses.manab.project.ui.main.MainActivity
-import android.support.v7.widget.LinearLayoutManager
 import android.widget.Toast
 import com.manasses.manab.project.data.local.entity.Atividade
 import kotlinx.android.synthetic.main.fragment_atividade_list.*
 import com.manasses.manab.project.util.ClickListener
+
+
+
 
 
 
@@ -44,7 +43,6 @@ class AtividadeFragment : BaseFragment() {
 
         return inflater.inflate(com.manasses.manab.project.R.layout.fragment_atividade_list,
             container, false)
-
     }
     fun setUpDagger() {
         AndroidSupportInjection.inject(this)
@@ -72,9 +70,20 @@ class AtividadeFragment : BaseFragment() {
                         override fun onClick(view: View, position: Int) {
                             var at = atividades[position]
 
-                            var  intent = Intent(parentActivity, QuizActivity::class.java)
-                            intent.putExtra("hash", at.hash)
-                            startActivity(intent)
+
+                            val bun = Bundle()
+                            bun.putString("hash", at.hash)
+                            val quiz = QuizFragment()
+                            quiz.setArguments(bun)
+
+                            parentActivity!!.
+                                getSupportFragmentManager().beginTransaction().remove(this@AtividadeFragment).commit()
+
+                            val transaction = parentActivity!!.getSupportFragmentManager().beginTransaction()
+                                .add(R.id.container, quiz).commit()
+
+
+
 
 
                         }

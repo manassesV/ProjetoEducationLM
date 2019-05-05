@@ -27,4 +27,13 @@ abstract class FragmentModule {
     abstract fun contributeAboutFragment() : AboutFragment
 
 
+    @ContributesAndroidInjector
+    abstract fun contributeQuizFragment() : QuizFragment
+
+    @ContributesAndroidInjector
+    abstract fun contributeVideoFragment() : VideoFragment
+
+    @ContributesAndroidInjector
+    abstract fun contributeProfessorFragment() : ProfessorFragment
+
 }

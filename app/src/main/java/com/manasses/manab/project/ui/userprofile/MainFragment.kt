@@ -2,9 +2,15 @@ package com.manasses.manab.project.ui.userprofile
 
 
 
+import android.Manifest
 import android.arch.lifecycle.Observer
 import android.arch.lifecycle.ViewModelProviders
+import android.content.Intent
+import android.content.pm.PackageManager
+import android.net.Uri
 import android.os.Bundle
+import android.support.v4.app.ActivityCompat
+import android.support.v4.content.ContextCompat
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -16,14 +22,13 @@ import com.irozon.alertview.AlertView
 import com.manasses.manab.project.R
 import dagger.android.support.AndroidSupportInjection
 import kotlinx.android.synthetic.main.fragment_main.*
-
-
+import kotlinx.android.synthetic.main.fragment_professor.*
 
 
 class MainFragment : BaseFragment() {
 
     private lateinit var viewModel: MainViewModel
-
+    private var Maps = 135
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,
                               savedInstanceState: Bundle?): View? {
@@ -57,6 +62,20 @@ class MainFragment : BaseFragment() {
         })
 
         scholl.setOnClickListener {
+
+            if (ContextCompat.checkSelfPermission(parentActivity!!,
+                    Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
+                ActivityCompat.requestPermissions(
+                    parentActivity!!,
+                    arrayOf(Manifest.permission.ACCESS_FINE_LOCATION), Maps)
+
+            } else {
+                call.setOnClickListener {
+                    var intent = Intent(Intent.ACTION_CALL, Uri.parse("tel:" + "+5511955567278"))
+                    startActivity(intent)
+                }
+
+            }
             parentActivity!!.
                 getSupportFragmentManager().beginTransaction().remove(this).commit()
 
@@ -72,6 +91,21 @@ class MainFragment : BaseFragment() {
                 .add(R.id.container, AboutFragment()).commit()
         }
 
+        videoaula.setOnClickListener {
+            parentActivity!!.
+                getSupportFragmentManager().beginTransaction().remove(this).commit()
+
+            val transaction = parentActivity!!.getSupportFragmentManager().beginTransaction()
+                .add(R.id.container, VideoFragment()).commit()
+        }
+
+        professor.setOnClickListener {
+            parentActivity!!.
+                getSupportFragmentManager().beginTransaction().remove(this).commit()
+
+            val transaction = parentActivity!!.getSupportFragmentManager().beginTransaction()
+                .add(R.id.container, ProfessorFragment()).commit()
+        }
         close.setOnClickListener{
             onPreExecute(false, "Saindo")
 

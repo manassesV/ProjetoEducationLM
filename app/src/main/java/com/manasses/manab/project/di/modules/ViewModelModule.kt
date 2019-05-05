@@ -39,6 +39,15 @@ abstract class ViewModelModule {
     @ViewModelKey(AtividadeViewModel::class)
     abstract fun bindAtividadeViewModel(atividadeViewModel: AtividadeViewModel): ViewModel
 
+    @Binds
+    @IntoMap
+    @ViewModelKey(QuizViewModel::class)
+    abstract fun bindQuizViewModel(quizViewModel: QuizViewModel): ViewModel
+
+    @Binds
+    @IntoMap
+    @ViewModelKey(VideoViewModel::class)
+    abstract fun bindVideoViewModel(videoViewModel: VideoViewModel): ViewModel
 
 
     @Binds

@@ -3,29 +3,32 @@
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="email">Email:</string>
-    <string name="senha">Senha:</string>
 
     <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="hello_blank_fragment" translatable="false">Hello blank fragment</string>
     <string name="activity">Activity</string>
-    <string name="activitytext">Faça sua atividade diária</string>
-    <string name="person">Professor</string>
-    <string name="persontext">Entre em contato com seu Professor</string>
-    <string name="scholl">Escola</string>
-    <string name="scholltext">Veja a localização de sua escola</string>
-    <string name="video">Vídeo Aula</string>
+    <string name="person">Teacher</string>
+    <string name="persontext">" Contact your Teacher"</string>
+    <string name="scholl">Scholl</string>
+    <string name="video">Video lessons</string>
     <string name="videotext">Learn by watching video lessons</string>
     <string name="amigos">Friends</string>
-    <string name="amigostext">Converse com seus amigos</string>
     <string name="acessar">Login</string>
     <string name="cadastrar">SignUp</string>
-    <string name="sair">Sair</string>
-    <string name="google_maps_key">AIzaSyD6UQo1_DCTO559pyYC3V0Q9VsE4Nbj5Fs</string>
-    <string name="title_activity_maps">Map</string>
+    <string name="sair">Exit</string>
+    <string name="google_maps_key" translatable="false">AIzaSyD6UQo1_DCTO559pyYC3V0Q9VsE4Nbj5Fs</string>
+    <string name="title_activity_maps" translatable="false">Map</string>
     <string name="about">Educatiom LM Application part of a education startup that has been emerging in the market, with
         the development of the Web platform has emerged the need for an application for users to have access mobility.
+        version 1.0
     </string>
-    <string name="utilizar">Como utilizar?</string>
-    <string name="aboututilizar">Register, join a teacher and start using.</string>
+    <string name="utilizar">How to use?</string>
+    <string name="aboututilizar">"Register, join a teacher and start using. "</string>
     <string name="information">Informação</string>
+    <string name="activitytext">Do your daily activity</string>
+    <string name="scholltext">"See the location of your school "</string>
+    <string name="amigostext">Chat with your friends</string>
+    <string name="senha">Password:</string>
+    <string name="yotub" translatable="false">AIzaSyD7NX0ni6HMmMDjN9U7JIGG86WsY4HYyGM</string>
+    <string name="videoedu" translatable="false">gwjZT4EoDZ0</string>
 </resources>

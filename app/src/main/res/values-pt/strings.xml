@@ -2,19 +2,25 @@
 <resources>
     <string name="app_name">Education LM</string>
     <string name="about">Educatiom LM Aplicativo parte de uma startup de educação que vem surgindo no mercado, com o
-        desenvolvimento da plataforma Web surgiu a necessidade de um aplicativo para os usuários terem mobilidade de
-        accesso.
+        desenvolvimento da plataforma Web surgiu a necessida version 1.0de de um aplicativo para os usuários terem
+        mobilidade de accesso.
     </string>
     <string name="aboututilizar">Faça o cadastro, associe a um professor e começe a utilizar.</string>
     <string name="acessar">Acessar</string>
     <string name="activity">Atividade</string>
-    <string name="activitytext">Do your daily activity</string>
+    <string name="activitytext">Faça sua atividade diária</string>
     <string name="amigos">Amigos</string>
-    <string name="amigostext">Chat with your friends</string>
+    <string name="amigostext">Converse com seus amigos</string>
     <string name="cadastrar">Cadastrar</string>
-    <string name="utilizar">How to use?</string>
+    <string name="utilizar">Como utilizar?</string>
     <string name="email">Email:</string>
-    <string name="persontext">Contact your Teacher</string>
-    <string name="scholl">Scholl</string>
+    <string name="persontext">Entre em contato com seu Professor</string>
+    <string name="scholl">Escola</string>
     <string name="videotext">Aprenda assistindo vídeo aulas</string>
+    <string name="person">Professor</string>
+    <string name="scholltext">Veja a localização de sua escola</string>
+    <string name="video">Vídeo Aula</string>
+    <string name="sair">Sair</string>
+    <string name="senha">Senha:</string>
+    <string name="information">Information</string>
 </resources>

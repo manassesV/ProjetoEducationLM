@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:map="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+>
+    <android.support.v7.widget.Toolbar
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/green"
+            android:theme="?attr/actionBarTheme"
+            android:minHeight="?attr/actionBarSize"
+            android:id="@+id/toolbar" android:padding="0dp"
+            android:elevation="7dp">
+        <ImageView android:id="@+id/voltar"
+                   android:layout_marginLeft="0dp" android:layout_width="60dp" android:layout_height="?attr/actionBarSize"
+                   android:src="@drawable/leftarrow" android:background="@color/green"/>
+        <ImageView
+                android:layout_width="54dp"
+                android:layout_height="?attr/actionBarSize"
+                android:background="@drawable/school"
+                android:padding="10dp"
+                android:layout_gravity="center"
+                android:layout_margin="5dp"
+        />
+    </android.support.v7.widget.Toolbar>
+
+    <android.support.v7.widget.CardView android:layout_width="match_parent"
+                                        android:layout_height="150dp"
+                                        android:layout_margin="@dimen/card_margin"
+                                        android:clickable="true"
+                                        android:id="@+id/share"
+    >
+        <ImageView android:layout_width="130dp"
+                   android:layout_height="81dp"
+                   android:src="@drawable/share"
+                   android:layout_gravity="center"/>
+    </android.support.v7.widget.CardView>
+    <android.support.v7.widget.CardView android:layout_width="match_parent"
+                                        android:layout_height="150dp"
+                                        android:layout_margin="@dimen/card_margin"
+                                        android:clickable="true"
+                                        android:id="@+id/call"
+    >
+        <ImageView android:layout_width="130dp"
+                   android:layout_height="81dp"
+                   android:src="@drawable/telephone"
+                   android:layout_gravity="center"/>
+    </android.support.v7.widget.CardView>
+</LinearLayout>

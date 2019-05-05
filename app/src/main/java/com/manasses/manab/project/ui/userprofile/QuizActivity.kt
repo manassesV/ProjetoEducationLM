@@ -16,6 +16,10 @@ import com.manasses.manab.project.ui.main.MainActivity
 
 
 
+
+
+
+
 class QuizActivity : AppCompatActivity() {
 
 
@@ -100,8 +104,8 @@ class QuizActivity : AppCompatActivity() {
                         var resposta = at.anwser[position]
 
                         if(at.correct_answer.equals(resposta)){
-                          //  var pontos =  txtseusPontos.text.toString().toInt()
-                            //txtseusPontos.text = (pontos + at.pontos!!.toInt()).toString()
+                          var pontos =  txtPontos.text.toString().toInt()
+                            txtPontosGanhos.text = (pontos + at.pontos!!.toInt()).toString()
 
                         }
 
@@ -115,9 +119,8 @@ class QuizActivity : AppCompatActivity() {
                             recyclerViewBotao.adapter = BotaoAdapter(arrayQuestion[posit].anwser, this@QuizActivity)
                         }else{
 
-                            val it = Intent(this@QuizActivity, MainActivity::class.java)
-                            startActivity(it)
-                            finish()
+                            finish();
+                            overridePendingTransition(0, android.R.anim.slide_out_right);
                         }
                     }
 
