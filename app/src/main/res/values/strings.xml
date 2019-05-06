@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Education LM</string>
+    <string name="app_name">ED Gamifica</string>
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="email">Email:</string>
@@ -18,9 +18,9 @@
     <string name="sair">Exit</string>
     <string name="google_maps_key" translatable="false">AIzaSyD6UQo1_DCTO559pyYC3V0Q9VsE4Nbj5Fs</string>
     <string name="title_activity_maps" translatable="false">Map</string>
-    <string name="about">Educatiom LM Application part of a education startup that has been emerging in the market, with
-        the development of the Web platform has emerged the need for an application for users to have access mobility.
-        version 1.0
+    <string name="about">"ED Gamifica Application part of a education startup that has been emerging in the market,
+        with\n the development of the Web platform has emerged the need for an application for users to have access
+        mobility.\n version 1.0\n "
     </string>
     <string name="utilizar">How to use?</string>
     <string name="aboututilizar">"Register, join a teacher and start using. "</string>

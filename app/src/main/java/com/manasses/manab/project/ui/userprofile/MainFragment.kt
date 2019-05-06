@@ -70,17 +70,13 @@ class MainFragment : BaseFragment() {
                     arrayOf(Manifest.permission.ACCESS_FINE_LOCATION), Maps)
 
             } else {
-                call.setOnClickListener {
-                    var intent = Intent(Intent.ACTION_CALL, Uri.parse("tel:" + "+5511955567278"))
-                    startActivity(intent)
-                }
+                parentActivity!!.
+                    getSupportFragmentManager().beginTransaction().remove(this).commit()
 
+                val transaction = parentActivity!!.getSupportFragmentManager().beginTransaction()
+                    .add(R.id.container, MapsFragment()).commit()
             }
-            parentActivity!!.
-                getSupportFragmentManager().beginTransaction().remove(this).commit()
 
-            val transaction = parentActivity!!.getSupportFragmentManager().beginTransaction()
-                .add(R.id.container, MapsFragment()).commit()
         }
 
         about.setOnClickListener {
