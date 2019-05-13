@@ -16,7 +16,7 @@
     <string name="acessar">Login</string>
     <string name="cadastrar">SignUp</string>
     <string name="sair">Exit</string>
-    <string name="google_maps_key" translatable="false">AIzaSyD6UQo1_DCTO559pyYC3V0Q9VsE4Nbj5Fs</string>
+    <string name="google_maps_key" translatable="false">AIzaSyCVzNNpjCnhqED7mLWwHvzNoi35GffZA68</string>
     <string name="title_activity_maps" translatable="false">Map</string>
     <string name="about">"ED Gamifica Application part of a education startup that has been emerging in the market,
         with\n the development of the Web platform has emerged the need for an application for users to have access
@@ -29,6 +29,8 @@
     <string name="scholltext">"See the location of your school "</string>
     <string name="amigostext">Chat with your friends</string>
     <string name="senha">Password:</string>
-    <string name="yotub" translatable="false">AIzaSyD7NX0ni6HMmMDjN9U7JIGG86WsY4HYyGM</string>
+    <string name="yotub" translatable="false">AIzaSyCVzNNpjCnhqED7mLWwHvzNoi35GffZA68</string>
     <string name="videoedu" translatable="false">gwjZT4EoDZ0</string>
+    <string name="shareteacher" translatable="true">Share your Teacher</string>
+    <string name="tellteacher" translatable="true">Tell how your Teacher</string>
 </resources>

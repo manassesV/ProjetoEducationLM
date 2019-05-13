@@ -50,17 +50,12 @@ class SignUpFragment : BaseFragment() {
             if(!viewState.toString().equals(AuthState.HOPE.toString())) {
                 if (viewState.toString().equals(AuthState.SUCCESS.toString())) {
 
-                    val alert = AlertView("Atenção", "Usuário cadastrado com sucesso",
-                        AlertStyle.BOTTOM_SHEET).show(parentActivity!!)
+                    AlertExecute("Atenção", "Usuário cadastrado com sucesso")
 
-                    parentActivity!!.
-                        getSupportFragmentManager().beginTransaction().remove(this).commit()
-
-                    val transaction = parentActivity!!.getSupportFragmentManager().beginTransaction()
-                        .add(R.id.container, MainFragment()).commit()
+                    nextFragment(this, MainFragment())
 
                 } else {
-                    val alert = AlertView("Atenção", viewState!!.msg, AlertStyle.BOTTOM_SHEET).show(parentActivity!!)
+                    AlertExecute("Atenção", viewState!!.msg)
                 }
                 onPreExecute(true)
 
@@ -73,11 +68,9 @@ class SignUpFragment : BaseFragment() {
         })
 
         btLogin.setOnClickListener({
-            parentActivity!!.
-                getSupportFragmentManager().beginTransaction().remove(this).commit()
 
-            val transaction = parentActivity!!.getSupportFragmentManager().beginTransaction()
-                .add(R.id.container, UserProfileFragment()).commit()
+            nextFragment(this, UserProfileFragment())
+
         })
 
     }

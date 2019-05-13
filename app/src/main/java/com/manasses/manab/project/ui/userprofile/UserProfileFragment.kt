@@ -56,14 +56,7 @@ class UserProfileFragment() : BaseFragment() {
     fun logado(){
 
         if(viewModel.logado()){
-            parentActivity!!.getSupportFragmentManager().beginTransaction().remove(this).commit()
-            val transaction =
-                parentActivity!!.getSupportFragmentManager().beginTransaction().
-                    setCustomAnimations(
-                        android.R.anim.fade_in, android.R.anim.fade_out, android.R.anim.fade_in,
-                        android.R.anim.fade_out
-                    ).add(R.id.container, MainFragment()).commit()
-
+            nextFragment(this, MainFragment())
         }
     }
     fun setUpVIew() {
@@ -76,17 +69,9 @@ class UserProfileFragment() : BaseFragment() {
                 if (!it.toString().equals(AuthState.HOPE.toString())) {
                     if (it.toString().equals(AuthState.SUCCESS.toString())) {
 
-                        parentActivity!!.getSupportFragmentManager().beginTransaction().remove(this).commit()
-
-                        val transaction =
-                            parentActivity!!.getSupportFragmentManager().beginTransaction().
-                                setCustomAnimations(
-                                android.R.anim.fade_in, android.R.anim.fade_out, android.R.anim.fade_in,
-                                android.R.anim.fade_out
-                            ).add(R.id.container, MainFragment()).commit()
+                        nextFragment(this, MainFragment())
                     } else {
-                        val alert =
-                            AlertView("Atenção", it!!.msg, AlertStyle.BOTTOM_SHEET).show(parentActivity!!)
+                        AlertExecute("Atenção", it!!.msg)
                     }
 
                 }
@@ -100,12 +85,10 @@ class UserProfileFragment() : BaseFragment() {
           })
 
           btSignUp.setOnClickListener({
-              parentActivity!!.
-                  getSupportFragmentManager().beginTransaction().remove(this).commit()
-              val transaction = parentActivity!!.
-                  getSupportFragmentManager().beginTransaction().
-              setCustomAnimations(android.R.anim.fade_in, android.R.anim.fade_out, android.R.anim.fade_in,
-                  android.R.anim.fade_out).add(R.id.container, SignUpFragment()).commit()
+
+              nextFragment(this, SignUpFragment())
+
+
           })
 
 

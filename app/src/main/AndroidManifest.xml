@@ -23,9 +23,6 @@
             android:roundIcon="@mipmap/ic_launcher_round"
             android:supportsRtl="true"
             android:theme="@style/AppTheme">
-        <activity android:name=".ui.userprofile.QuizActivity"
-                  android:screenOrientation="landscape">
-        </activity>
         <!--
              The API key for Google Maps-based APIs is defined as a string resource.
              (See the file "res/values/google_maps_api.xml").
@@ -36,7 +33,7 @@
         -->
         <meta-data
                 android:name="com.google.android.maps.v2.API_KEY"
-                android:value="AIzaSyD7NX0ni6HMmMDjN9U7JIGG86WsY4HYyGM"/>
+                android:value="@string/google_maps_key"/>
         <meta-data
                 android:name="com.google.firebase.messaging.default_notification_icon"
                 android:resource="@drawable/ic_account_balance_black_24dp"/>
@@ -47,7 +44,9 @@
         <meta-data
                 android:name="com.google.firebase.messaging.default_notification_color"
                 android:resource="@color/green"/>
-
+        <activity
+                android:name=".ui.userprofile.VideoActivity"
+                android:screenOrientation="portrait"/>
         <activity
                 android:name=".ui.main.SplashActivity"
                 android:screenOrientation="portrait">

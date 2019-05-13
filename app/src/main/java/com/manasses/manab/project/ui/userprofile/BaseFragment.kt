@@ -8,6 +8,8 @@ import android.arch.lifecycle.ViewModelProvider
 import android.arch.lifecycle.ViewModelProviders
 import android.content.Context
 import android.support.v4.app.Fragment
+import com.irozon.alertview.AlertStyle
+import com.irozon.alertview.AlertView
 import com.manasses.manab.project.R
 import com.manasses.manab.project.ui.main.MainActivity
 import dagger.android.support.AndroidSupportInjection
@@ -47,6 +49,23 @@ open class BaseFragment: Fragment(){
             dialog.dismiss()
         }
 
+    }
+
+    protected fun AlertExecute(title: String, msg: String){
+        AlertView(title, msg,
+            AlertStyle.BOTTOM_SHEET).show(parentActivity!!)
+    }
+
+    protected  fun nextFragment(thisRemove: BaseFragment ,nextFragment: BaseFragment){
+        parentActivity!!.
+            getSupportFragmentManager().beginTransaction().remove(thisRemove).commit()
+
+        val transaction = parentActivity!!.getSupportFragmentManager().beginTransaction()
+            .setCustomAnimations(
+                    android.R.anim.fade_in, android.R.anim.fade_out, android.R.anim.fade_in,
+                    android.R.anim.fade_out
+                )
+            .add(R.id.container, nextFragment).commit()
     }
 
 }

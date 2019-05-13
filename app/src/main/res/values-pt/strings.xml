@@ -2,8 +2,8 @@
 <resources>
     <string name="app_name">ED Gamifica</string>
     <string name="about">ED Gamifica Aplicativo parte de uma startup de educação que vem surgindo no mercado, com o
-        desenvolvimento da plataforma Web surgiu a necessida version 1.0de de um aplicativo para os usuários terem
-        mobilidade de accesso.
+        desenvolvimento da plataforma Web surgiu a necessidade de um aplicativo para os usuários terem mobilidade de
+        accesso. Site: edgamifica.com.br
     </string>
     <string name="aboututilizar">Faça o cadastro, associe a um professor e começe a utilizar.</string>
     <string name="acessar">Acessar</string>
@@ -22,5 +22,9 @@
     <string name="video">Vídeo Aula</string>
     <string name="sair">Sair</string>
     <string name="senha">Senha:</string>
-    <string name="information">Information</string>
+    <string name="information">Informação</string>
+    <string name="shareteacher" translatable="true">Compartilhe com seu professor</string>
+    <string name="tellteacher" translatable="true">Ligue para seu professor</string>
+
+
 </resources>

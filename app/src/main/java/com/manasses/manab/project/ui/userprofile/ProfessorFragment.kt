@@ -2,7 +2,6 @@ package com.manasses.manab.project.ui.userprofile
 
 
 import android.Manifest
-import android.app.AlertDialog
 import android.content.Intent
 import android.content.pm.PackageManager
 import android.net.Uri
@@ -12,7 +11,6 @@ import android.support.v4.content.ContextCompat
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import com.manasses.manab.project.R
 import dagger.android.support.AndroidSupportInjection
 import kotlinx.android.synthetic.main.fragment_professor.*
 
@@ -64,7 +62,7 @@ class ProfessorFragment : BaseFragment() {
         }
 
 
-        share.setOnClickListener {
+        sharing.setOnClickListener {
             val sendIntent = Intent()
             sendIntent.action = Intent.ACTION_SEND
             sendIntent.putExtra(Intent.EXTRA_TEXT, "This is my text to send.")
@@ -74,11 +72,7 @@ class ProfessorFragment : BaseFragment() {
 
 
       voltar.setOnClickListener {
-          parentActivity!!.
-              getSupportFragmentManager().beginTransaction().remove(this).commit()
-
-          val transaction = parentActivity!!.getSupportFragmentManager().beginTransaction()
-              .add(R.id.container, MainFragment()).commit()
+         nextFragment(this, MainFragment())
       }
 
     }

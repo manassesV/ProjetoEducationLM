@@ -18,10 +18,9 @@ data class User(
     var password: String = "",
 
     var name: String = "",
+
     var login: Boolean = false,
 
     var lastRefresh: Date? = null
-
-
 
 )

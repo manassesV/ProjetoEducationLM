@@ -1,6 +1,6 @@
 package com.manasses.manab.project.data.local.entity
 
-import com.google.gson.annotations.SerializedName
+
 
 
 class Atividade(
@@ -16,3 +16,4 @@ class Question(
     var correct_answer: String?,
     var anwser: ArrayList<String>
 )
+

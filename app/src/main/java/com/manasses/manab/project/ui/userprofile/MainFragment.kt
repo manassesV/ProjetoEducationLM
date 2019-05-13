@@ -51,67 +51,54 @@ class MainFragment : BaseFragment() {
 
     private fun setUpVIew() {
 
+        try {
 
+            atividade.setOnClickListener({
+                nextFragment(this, AtividadeFragment())
+            })
 
-        atividade.setOnClickListener({
-            parentActivity!!.
-                getSupportFragmentManager().beginTransaction().remove(this).commit()
+            scholl.setOnClickListener {
 
-            val transaction = parentActivity!!.getSupportFragmentManager().beginTransaction()
-                .add(R.id.container, AtividadeFragment()).commit()
-        })
+                if (ContextCompat.checkSelfPermission(
+                        parentActivity!!,
+                        Manifest.permission.ACCESS_FINE_LOCATION
+                    ) != PackageManager.PERMISSION_GRANTED
+                ) {
+                    ActivityCompat.requestPermissions(
+                        parentActivity!!,
+                        arrayOf(Manifest.permission.ACCESS_FINE_LOCATION), Maps
+                    )
 
-        scholl.setOnClickListener {
+                } else {
+                    parentActivity!!.getSupportFragmentManager().beginTransaction().remove(this).commit()
+                    nextFragment(this, MapsFragment())
 
-            if (ContextCompat.checkSelfPermission(parentActivity!!,
-                    Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
-                ActivityCompat.requestPermissions(
-                    parentActivity!!,
-                    arrayOf(Manifest.permission.ACCESS_FINE_LOCATION), Maps)
+                }
 
-            } else {
-                parentActivity!!.
-                    getSupportFragmentManager().beginTransaction().remove(this).commit()
-
-                val transaction = parentActivity!!.getSupportFragmentManager().beginTransaction()
-                    .add(R.id.container, MapsFragment()).commit()
             }
 
-        }
+            about.setOnClickListener {
+                nextFragment(this, AboutFragment())
+            }
 
-        about.setOnClickListener {
-            parentActivity!!.
-                getSupportFragmentManager().beginTransaction().remove(this).commit()
+            videoaula.setOnClickListener {
+               var intent = Intent(parentActivity, VideoActivity::class.java)
+                startActivity(intent)
+            }
 
-            val transaction = parentActivity!!.getSupportFragmentManager().beginTransaction()
-                .add(R.id.container, AboutFragment()).commit()
-        }
+            professor.setOnClickListener {
+                nextFragment(this, ProfessorFragment())
+            }
+            close.setOnClickListener {
+                onPreExecute(false, "Saindo")
 
-        videoaula.setOnClickListener {
-            parentActivity!!.
-                getSupportFragmentManager().beginTransaction().remove(this).commit()
+                viewModel.Logout()
+                nextFragment(this, UserProfileFragment())
+                onPreExecute(true)
 
-            val transaction = parentActivity!!.getSupportFragmentManager().beginTransaction()
-                .add(R.id.container, VideoFragment()).commit()
-        }
-
-        professor.setOnClickListener {
-            parentActivity!!.
-                getSupportFragmentManager().beginTransaction().remove(this).commit()
-
-            val transaction = parentActivity!!.getSupportFragmentManager().beginTransaction()
-                .add(R.id.container, ProfessorFragment()).commit()
-        }
-        close.setOnClickListener{
-            onPreExecute(false, "Saindo")
-
-            viewModel.Logout()
-            parentActivity!!.
-                getSupportFragmentManager().beginTransaction().remove(this).commit()
-
-            val transaction = parentActivity!!.getSupportFragmentManager().beginTransaction()
-                .add(R.id.container, UserProfileFragment()).commit()
-            onPreExecute(true)
+            }
+        }catch (e: Exception) {
+           AlertExecute("Erro", "Contato o desenvolvedor do aplicativo")
         }
     }
 

@@ -48,7 +48,8 @@ class MapsFragment : BaseFragment(){
         val rootView = inflater.inflate(R.layout.fragment_maps, container, false)
 
         val mapFragment =
-            childFragmentManager.findFragmentById(R.id.frg) as SupportMapFragment?  //use SuppoprtMapFragment for using in fragment instead of activity  MapFragment = activity   SupportMapFragment = fragment
+            childFragmentManager.findFragmentById(R.id.frg)
+                    as SupportMapFragment?  //use SuppoprtMapFragment for using in fragment instead of activity  MapFragment = activity   SupportMapFragment = fragment
         mapFragment!!.getMapAsync { mMap ->
             mMap.mapType = GoogleMap.MAP_TYPE_NORMAL
 
@@ -117,13 +118,7 @@ class MapsFragment : BaseFragment(){
     private fun setUpVIew() {
 
         voltar.setOnClickListener({
-            parentActivity!!.
-                getSupportFragmentManager().beginTransaction().remove(this).commit()
-
-            val transaction = parentActivity!!.
-                getSupportFragmentManager().beginTransaction().add(R.id.container, MainFragment()).commit()
-
-
+            nextFragment(this, MainFragment())
         })
     }
 

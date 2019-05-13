@@ -7,6 +7,7 @@ import com.facebook.stetho.okhttp3.StethoInterceptor
 import com.google.gson.Gson
 import com.google.gson.GsonBuilder
 import com.manasses.manab.project.data.local.MyDatabase
+import com.manasses.manab.project.data.local.dao.QuizDao
 import com.manasses.manab.project.data.local.dao.UserDao
 import com.manasses.manab.project.data.remote.UserWebService
 import com.manasses.manab.project.data.repositories.MainRepository
@@ -37,6 +38,12 @@ class AppModule {
     @Singleton
     fun provideUserDao(database: MyDatabase): UserDao {
         return database.UserDao()
+    }
+
+    @Provides
+    @Singleton
+    fun provideQuizDao(database: MyDatabase): QuizDao {
+        return database.QuizDao()
     }
 
     @Provides
